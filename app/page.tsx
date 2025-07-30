@@ -343,33 +343,39 @@ export default function Portfolio() {
       {/* Contact Section */}
         <section id="contact" className={`py-20 backdrop-blur-sm transition-colors duration-300 ${isDarkMode ? 'bg-black/30' : 'bg-white/30'}`}>
         <div className="container mx-auto px-6 text-center">
-            <h2 className={`text-4xl font-bold mb-8 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'var(--font-fingerpaint)' }}>
+            <h2 className={`text-3xl sm:text-4xl font-bold mb-8 px-4 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'var(--font-fingerpaint)' }}>
             Let's Connect
           </h2>
-            <p className={`text-xl mb-12 max-w-2xl mx-auto transition-colors duration-300 ${isDarkMode ? 'text-white/80' : 'text-black/80'}`} style={{ fontFamily: 'var(--font-schoolbell)' }}>
+            <p className={`text-lg sm:text-xl mb-12 max-w-2xl mx-auto px-4 transition-colors duration-300 ${isDarkMode ? 'text-white/80' : 'text-black/80'}`} style={{ fontFamily: 'var(--font-schoolbell)' }}>
             I'm always excited to discuss AI, collaborate on projects, or just chat about technology. Feel free to reach
             out!
           </p>
             
             {/* Contact Info */}
-            <div className="flex justify-center space-x-8 mb-8">
-              <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-black/10 border-black/20'}`}>
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+              <div className={`flex items-center justify-center sm:justify-start space-x-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-black/10 border-black/20'}`}>
                 <Mail className={`h-5 w-5 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-                <span className={`transition-colors duration-300 ${isDarkMode ? 'text-white/90' : 'text-black/90'}`} style={{ fontFamily: 'var(--font-schoolbell)' }}>sourjo.shihab1@gmail.com</span>
+                <a 
+                  href="mailto:sourjo.shihab1@gmail.com"
+                  className={`text-sm sm:text-base transition-colors duration-300 hover:underline ${isDarkMode ? 'text-white/90 hover:text-white' : 'text-black/90 hover:text-black'}`} 
+                  style={{ fontFamily: 'var(--font-schoolbell)' }}
+                >
+                  sourjo.shihab1@gmail.com
+                </a>
               </div>
-              <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-black/10 border-black/20'}`}>
+              <div className={`flex items-center justify-center sm:justify-start space-x-2 px-4 py-2 rounded-lg backdrop-blur-sm border transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-black/10 border-black/20'}`}>
                 <Phone className={`h-5 w-5 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`} />
-                <span className={`transition-colors duration-300 ${isDarkMode ? 'text-white/90' : 'text-black/90'}`} style={{ fontFamily: 'var(--font-schoolbell)' }}>+880 1732309825</span>
+                <span className={`text-sm sm:text-base transition-colors duration-300 ${isDarkMode ? 'text-white/90' : 'text-black/90'}`} style={{ fontFamily: 'var(--font-schoolbell)' }}>+880 1732309825</span>
               </div>
             </div>
             
             {/* Social Media */}
-            <div className="flex justify-center space-x-4">
+            <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
             <Button
                 onClick={() => window.open("https://www.linkedin.com/in/shihab-yousuf-b17475291/", "_blank")}
               size="lg"
               variant="outline"
-                className={`transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
+                className={`w-full sm:w-auto transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
                 style={{ fontFamily: 'var(--font-schoolbell)' }}
             >
               <Linkedin className="h-5 w-5 mr-2" />
@@ -379,7 +385,7 @@ export default function Portfolio() {
                 onClick={() => window.open("https://www.facebook.com/soudhowo", "_blank")}
                 size="lg"
                 variant="outline"
-                className={`transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
+                className={`w-full sm:w-auto transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
                 style={{ fontFamily: 'var(--font-schoolbell)' }}
               >
                 <Facebook className="h-5 w-5 mr-2" />
@@ -389,7 +395,7 @@ export default function Portfolio() {
                 onClick={() => window.open("https://www.instagram.com/soudhowo/", "_blank")}
                 size="lg"
                 variant="outline"
-                className={`transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
+                className={`w-full sm:w-auto transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
                 style={{ fontFamily: 'var(--font-schoolbell)' }}
               >
                 <Instagram className="h-5 w-5 mr-2" />
@@ -399,7 +405,7 @@ export default function Portfolio() {
                 onClick={() => window.open("https://x.com/IamSHIHABYOUSUF", "_blank")}
               size="lg"
               variant="outline"
-                className={`transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
+                className={`w-full sm:w-auto transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
                 style={{ fontFamily: 'var(--font-schoolbell)' }}
             >
                 <Twitter className="h-5 w-5 mr-2" />
