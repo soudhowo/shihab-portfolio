@@ -44,6 +44,14 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "AI Code Assistant",
+      description:
+        "Intelligent code analysis and suggestions powered by AI. Built with Next.js and TypeScript, featuring modern UI components and real-time code analysis capabilities.",
+      tech: ["TypeScript", "Next.js", "React", "AI/ML", "Tailwind CSS"],
+      github: "https://github.com/soudhowo/ai-code-assistant",
+      demo: "#",
+    },
+    {
       title: "Geodetic Survey Corporation Website",
       description:
         "Helped build a professional website for a government-registered land surveying company with over 20 years of experience. The website showcases their services, technologies, and nationwide coverage across Bangladesh.",
@@ -57,14 +65,6 @@ export default function Portfolio() {
         "Contributed to an online business by handling their SEO optimizations and product management. Improved search engine visibility and streamlined product operations for better customer experience.",
       tech: ["SEO", "Product Management", "Digital Marketing", "Analytics"],
       github: "#",
-      demo: "#",
-    },
-    {
-      title: "AI-Powered Code Assistant",
-      description:
-        "A machine learning model that helps developers write better code by providing intelligent suggestions and bug detection.",
-      tech: ["Python", "TensorFlow", "React", "FastAPI"],
-      github: "https://github.com/soudhowo/ai-code-assistant",
       demo: "#",
     },
   ]
@@ -286,27 +286,33 @@ export default function Portfolio() {
                       </Badge>
                     ))}
                   </div>
-                  <div className="flex space-x-3">
-                    <Button
-                      onClick={() => window.open(project.github, "_blank")}
-                      size="sm"
-                      variant="outline"
-                        className={`transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
-                        style={{ fontFamily: 'var(--font-schoolbell)' }}
-                    >
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button
-                      onClick={() => window.open(project.demo, "_blank")}
-                      size="sm"
-                        className={`transition-colors duration-300 ${isDarkMode ? 'bg-white text-black hover:bg-white/90' : 'bg-black text-white hover:bg-black/90'}`}
-                        style={{ fontFamily: 'var(--font-schoolbell)' }}
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
-                    </Button>
-                  </div>
+                  {project.github !== "#" || project.demo !== "#" ? (
+                    <div className="flex space-x-3">
+                      {project.github !== "#" && (
+                        <Button
+                          onClick={() => window.open(project.github, "_blank")}
+                          size="sm"
+                          variant="outline"
+                            className={`transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/30 hover:bg-white/20 text-white' : 'bg-black/10 border-black/30 hover:bg-black/20 text-black'}`}
+                            style={{ fontFamily: 'var(--font-schoolbell)' }}
+                        >
+                          <Github className="h-4 w-4 mr-2" />
+                          Code
+                        </Button>
+                      )}
+                      {project.demo !== "#" && (
+                        <Button
+                          onClick={() => window.open(project.demo, "_blank")}
+                          size="sm"
+                            className={`transition-colors duration-300 ${isDarkMode ? 'bg-white text-black hover:bg-white/90' : 'bg-black text-white hover:bg-black/90'}`}
+                            style={{ fontFamily: 'var(--font-schoolbell)' }}
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Demo
+                        </Button>
+                      )}
+                    </div>
+                  ) : null}
                 </CardContent>
               </Card>
             ))}

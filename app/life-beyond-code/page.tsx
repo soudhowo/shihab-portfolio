@@ -97,23 +97,16 @@ export default function LifeBeyondCode() {
       description: "Always loved my friends. Love to travel. Love my Family. Yes, I'm that guy xD",
       achievements: ["Likes to travel", "chill with friends"],
       slides: [
-        { type: "image", src: "/life (10).JPG", alt: "Life art" },
+        { type: "image", src: "/life (1).jpg", alt: "Life capture" },
+        { type: "image", src: "/life (2).jpg", alt: "Life art" },
         { type: "image", src: "/life (3).jpg", alt: "Life work" },
         { type: "image", src: "/life (4).jpg", alt: "Life capture" },
-        { type: "image", src: "/life (5).jpg", alt: "Life art" },
         { type: "image", src: "/life (6).jpg", alt: "Life moment" },
         { type: "image", src: "/life (7).jpg", alt: "Life scene" },
         { type: "image", src: "/life (8).jpg", alt: "Life work" },
         { type: "image", src: "/life (9).jpg", alt: "Life capture" },
         { type: "image", src: "/life (11).jpg", alt: "Life moment" },
-        { type: "image", src: "/life (12).jpg", alt: "Life scene" },
-        { type: "image", src: "/life (13).jpg", alt: "Life work" },
-        { type: "image", src: "/life (16).jpg", alt: "Life moment" },
-        { type: "image", src: "/life (17).jpg", alt: "Life scene" },
-        { type: "image", src: "/life (18).jpg", alt: "Life work" },
-        { type: "image", src: "/life (20).jpg", alt: "Life art" },
-        { type: "image", src: "/life (21).jpg", alt: "Life moment" },
-        { type: "image", src: "/life (22).jpg", alt: "Life scene" }
+        { type: "image", src: "/life (12).jpg", alt: "Life scene" }
       ],
       color: "pink"
     }
